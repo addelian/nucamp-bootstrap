@@ -1,3 +1,5 @@
+
+// Single pause/play button for carousel
 $(function() {
     $(".carousel").carousel( {interval: 2000 } );
     $("#carouselButton").click(function(){
@@ -10,5 +12,18 @@ $(function() {
             $("#carouselButton").children("i").removeClass("fa-play");
             $("#carouselButton").children("i").addClass("fa-pause");
         }
+    });
+});
+
+//Calling modals from "Reserve Campsite" and "Login" buttons
+$(function () {
+    $("#reserveButton").click(function() {
+        $("#reserveModal").modal("show");
+    });
+});
+
+$(function () {
+    $("#loginButton").click(function () {
+        $("#loginModal").modal("show");
     });
 });
